@@ -1,22 +1,22 @@
 {
   "development": {
     "username": "postgres",
-    "password": "SAIKUMAR",
-    "database": "my_app_development",
+    "password": "saikumar",
+    "database": "node_sequelize",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": "SAIKUMAR",
-    "database": "my_app_test",
+    "password": "saikumar",
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "SAIKUMAR",
-    "database": "my_app_production",
+    "password": "saikumar",
+    "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
