@@ -19,20 +19,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      stud_id:{
-        type:Sequelize.INTEGER,
+      lecturer_id:{
         references:{
-          model:'students',
-          foreignkey:'id'
-        },
-        onDelete:'cascade',
-        onUpdate:'cascade'
-      },
-      sub_id:{
-        type:Sequelize.INTEGER,
-        references:{
-          model:'subjects',
-          foreignkey:'id'
+          foreignkey:'id',
+          model:'lecturers'
         },
         onDelete:'cascade',
         onUpdate:'cascade'
