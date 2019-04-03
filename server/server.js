@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 4444;
 
 import os from "os";
 import express from "express";

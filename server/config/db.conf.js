@@ -8,7 +8,7 @@ export default class DBConfig {
                                                           : dbConst.localhost;
 
       mongoose.Promise = Promise;                                                    
-      mongoose.connect(URL);
+      mongoose.connect(URL, { useNewUrlParser: true });
       mongoose.connection.on("error", console.error.bind(console, "An error ocurred with the DB connection: "));
     }
 };
