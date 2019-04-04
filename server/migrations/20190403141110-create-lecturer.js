@@ -18,6 +18,15 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      sub_id:{
+        type:Sequelize.INTEGER,
+        references:{
+          foreignkey:'id',
+          model:'subjects'
+        },
+        onDelete:'cascade',
+        onUpdate:'cascade'
       }
     });
   },

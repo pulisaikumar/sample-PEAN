@@ -18,14 +18,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      lecturer_id:{
-        references:{
-          foreignkey:'id',
-          model:'lecturers'
-        },
-        onDelete:'cascade',
-        onUpdate:'cascade'
       }
     });
   },

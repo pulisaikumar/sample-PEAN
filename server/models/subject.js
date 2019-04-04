@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey:'sub_id',
       as:'course'
     })
-    subject.belongsTo(models.lecturer)
+    subject.hasOne(models.lecturer,
+      {
+        foreignKey:'sub_id',
+        as :'subject'
+      })
    };
   return subject;
 };

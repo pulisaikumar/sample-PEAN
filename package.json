@@ -25,7 +25,8 @@
     "pg": "^7.9.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^5.2.8",
-    "sequelize-cli": "^5.4.0"
+    "sequelize-cli": "^5.4.0",
+    "bluebird": "latest"
   },
   "devDependencies": {
     "chai": "^3.5.0",

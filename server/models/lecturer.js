@@ -5,10 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   lecturer.associate = function(models) {
     // associations can be defined here
-    lecturer.hasOne(models.subject,{
-      foreignKey:'id',
-      as:'lecturer'
-    })
+    lecturer.belongsTo(models.subject)
   };
   return lecturer;
 };
