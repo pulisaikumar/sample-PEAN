@@ -8,7 +8,7 @@ export default class TodoRoutes {
     .post(TodoController.createTodo);
 
     router
-    .route("/api/todos/:id")
+    .route("/api/todos/_id")
     .delete(TodoController.deleteTodo);
   }
 }
