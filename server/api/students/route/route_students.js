@@ -6,8 +6,8 @@ import  StudentsController from '/home/sb-saikumar/WebstormProjects/sample-PEAN/
        .route('/student')
        .get(StudentsController.getAll)
        .post(StudentsController.createNew)
-
-       /*.route('/student/id')
-       .get(StudentsController.getById)*/
+     router
+       .route('/student/:id')
+       .get(StudentsController.getById)
    }
  }

@@ -13,7 +13,7 @@ export default class SubjectDao{
   static createNew(request){
     return new Promise((resolve,reject)=>{
      model.subject.create({
-     name: request.name})
+     name: request.name })
        .then(subject=>{resolve(subject)})
        .catch((error=>{reject(error)}))
    })

@@ -23,7 +23,7 @@ module.exports = {
         type:Sequelize.INTEGER,
         references:{
           foreignkey:'id',
-          model:'subjects'
+          model:'subjects',
         },
         onDelete:'cascade',
         onUpdate:'cascade'

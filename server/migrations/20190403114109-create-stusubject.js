@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references:{
           model:'students',
-          foreignkey:'stu_id'
+          foreignkey:'id'
         },
         onDelete:'cascade',
         onUpdate:'cascade'
@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references:{
           model:'subjects',
-          foreignkey:'sub_id'
+          foreignkey:'id'
         },
         onUpdate:'cascade',
         onDelete:'cascade'

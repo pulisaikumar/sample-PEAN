@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     subject.belongsToMany(models.student,{
       through:'stusubject',
       foreignKey:'sub_id',
-      as:'course'
+      as:'course',
+      allowNull: false
+
     })
     subject.hasOne(models.lecturer,
       {
