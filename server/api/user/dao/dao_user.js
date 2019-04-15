@@ -1,12 +1,11 @@
 import Promise from "bluebird"
 import models from "/home/sb-saikumar/WebstormProjects/sample-PEAN/server/models"
 export default class UserDao {
-
   static getAll() {
     return new Promise((resolve, reject) => {
       models.user.findAll({})
-        .then((user) => {resolve(user)})
-        .catch((error) =>{ reject('not connect')})
+        .then((user) => resolve(user))
+        .catch((error) =>reject(error))
     })
   }
 
@@ -17,12 +16,12 @@ export default class UserDao {
         email: request.email,
         phone: request.phone,
       })
-        .then(result => {
+        .then(result =>
           resolve(result)
-        })
-        .catch((error => {
+        )
+        .catch((error =>
           reject(error)
-        }))
+        ))
     })
   }
 
@@ -30,8 +29,8 @@ export default class UserDao {
   static getbyid(id){
     return new Promise((resolve,reject)=>{
       models.user.findAll({where:{id:id}})
-      .then(result=>{ resolve(result)})
-      .catch(error=>{reject(error)})
+      .then(result=> resolve(result))
+      .catch(error=>reject(error))
     })
   }
 

@@ -22,7 +22,7 @@ module.exports = {
       sub_id:{
         type:Sequelize.INTEGER,
         references:{
-          foreignkey:'id',
+          key:'id',
           model:'subjects',
         },
         onDelete:'cascade',
