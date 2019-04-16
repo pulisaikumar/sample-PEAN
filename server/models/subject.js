@@ -7,15 +7,16 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     subject.belongsToMany(models.student,{
       through:'stusubject',
-      foreignKey:'sub_id',
-      as:'course',
-      allowNull: false
-
+      as:'student',
+      foreignKey:{
+        name:'sub_id',
+        allowNull: false
+      },
     })
     subject.hasOne(models.lecturer,
       {
         foreignKey:'sub_id',
-        as :'subject'
+        as :'subjects'
       })
    };
   return subject;

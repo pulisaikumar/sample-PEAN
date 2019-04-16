@@ -18,4 +18,30 @@ export default class SubjectDao{
        .catch((error=>{reject(error)}))
    })
   }
+
+  static getById(id){
+     return new Promise((resolve,reject)=>{
+       model.subject.findAll({where:{id:id}})
+         .then(results=>resolve(results))
+         .catch(error=>reject(error))
+     })
+  }
+
+  static removeById(id) {
+    return new Promise((resolve, reject) => {
+      model.subject.destroy({where:{id:id}})
+        .then(results=>resolve(results))
+        .catch(error=>reject(error))
+
+    })
+  }
+
+  static updateById(request,id){
+     return new Promise((resolve,reject)=>{
+       model.subject.update({name:request.name},{where:{id:id}})
+         .then(results=>resolve(results))
+         .catch(error=>reject(error))
+     })
+  }
+
 }

@@ -5,6 +5,12 @@ export default  class SubjectRoute {
       .route('/subject')
       .get(SubjectController.getAll)
       .post(SubjectController.createNew)
+
+    router
+      .route('/subject/:id')
+      .get(SubjectController.getbyid)
+      .put(SubjectController.updatebyid)
+      .delete(SubjectController.removebyid)
   }
 
 }

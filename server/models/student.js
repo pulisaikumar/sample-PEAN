@@ -7,8 +7,12 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     student.belongsToMany(models.subject,{
       through:'stusubject',
-      foreignKey:'stud_id',
-      as:'student'
+      as:'subject',
+      foreignKey:
+        {
+          name:'stu_id',
+          allowNull: false
+        },
     })
 
   };

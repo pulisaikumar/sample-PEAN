@@ -23,7 +23,7 @@ export default class MoviesController {
     }
 
 
-    static updatebyd(req,res){
+    static updatebyid(req,res){
     MoviesDao.updatebyId(req.body,req.params.id)
     .then(results=>res.status(200).json(results))
         .catch(error=>res.status(400).json(error))

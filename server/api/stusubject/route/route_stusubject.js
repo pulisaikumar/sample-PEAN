@@ -5,8 +5,10 @@ export default class StusubjectRoute {
       .route('/stusub')
       .get(StusubjectController.getall)
       .post(StusubjectController.createnew)
- /*   Router
-      .route('./stusub/:id')
-      .get(StusubjectController.getbyid);*!/*/
+   router
+      .route('./stusub/:id')/*
+      .get(StusubjectController.getbyid)
+      .put(StusubjectController.updatebyid)*/
+      .delete(StusubjectController.removebyid);
   }
 }

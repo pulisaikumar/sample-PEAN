@@ -24,4 +24,22 @@ import models from '../../../models';
          .catch((error) => {reject(error)})
      })
    }
+
+   static updateById(request,id){
+    return new Promise((resolve,reject)=>{
+      models.student.update({name:request.name},{where:{id:id}})
+        .then(results=>resolve(results))
+        .catch(error=>reject(error))
+    })
+   }
+
+   static removeById(id){
+    return new Promise((resolve,reject)=>{
+      models.student.destroy({where:{id:id}})
+        .then(results=>resolve(results))
+        .catch(error=>reject(error))
+    })
+   }
+
+
 }
