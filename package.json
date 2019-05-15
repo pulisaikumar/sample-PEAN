@@ -17,16 +17,17 @@
     "babel-preset-minify": "^0.4.1",
     "babel-regenerator-runtime": "^6.5.0",
     "babel-register": "^6.26.0",
+    "bluebird": "latest",
     "compression": "^1.7.4",
     "express": "^4.16.4",
     "helmet": "^3.16.0",
     "lodash": "^4.6.1",
     "mongoose": "^5.4.20",
-    "pg": "^7.9.0",
+    "morgan": "^1.9.1",
+    "pg": "^7.10.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^5.2.8",
-    "sequelize-cli": "^5.4.0",
-    "bluebird": "latest"
+    "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
