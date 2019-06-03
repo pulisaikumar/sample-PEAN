@@ -8,12 +8,13 @@ import RoutesConfig from "./config/routes.conf";
 import Routes from "./routes";
 
 const app = express();
-
+app.get("/",(req,res)=>{
+    res.send("ok its work");
+})
 RoutesConfig.init(app);
 //DBConfig.init();
 Routes.init(app, express.Router());
-
-http.createServer(app)
+ http.createServer(app)
     .listen(PORT, () => {
       console.log(`up and running @: ${os.hostname()} on port: ${PORT}`);
       console.log(`enviroment: ${process.env.NODE_ENV}`);
