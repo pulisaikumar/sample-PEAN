@@ -4,7 +4,7 @@ export default class MoviesRoute {
     Router
       .route('/movies')
       .get(MoviesCotroller.getAll)
-     .post(MoviesCotroller.createNew)
+      .post(MoviesCotroller.createNew)
 
     Router
        .route('/movies/:id')
