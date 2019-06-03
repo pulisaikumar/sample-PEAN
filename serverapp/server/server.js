@@ -1,10 +1,9 @@
 const PORT = process.env.PORT || 4444;
-
 import os from "os";
 import express from "express";
 import http from "http";
 import RoutesConfig from "./config/routes.conf";
-//import DBConfig from "./config/db.conf";
+import DBConfig from "./config/db.conf";
 import Routes from "./routes";
 
 const app = express();
@@ -12,7 +11,7 @@ app.get("/",(req,res)=>{
     res.send("ok its work");
 })
 RoutesConfig.init(app);
-//DBConfig.init();
+DBConfig.init();
 Routes.init(app, express.Router());
  http.createServer(app)
     .listen(PORT, () => {

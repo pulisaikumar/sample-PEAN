@@ -47,5 +47,9 @@
   "bugs": {
     "url": "https://github.com/saikumar/app/issues"
   },
+  "engines": {
+    "node": "9.11.2",
+    "npm": "5.6.0"
+  },
   "homepage": "https://github.com/saikumar/app"
 }
