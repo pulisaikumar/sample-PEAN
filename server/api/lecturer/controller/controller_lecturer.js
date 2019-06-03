@@ -13,6 +13,6 @@ import LecturerDao from "/home/sb-saikumar/WebstormProjects/sample-PEAN/server/a
       .createNew(req.body)
       .then(lecturer=>res.status(200).json(lecturer))
       .catch(error=>res.status(400).json(error))
-   }
+     }
 
 }
