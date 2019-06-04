@@ -14,7 +14,7 @@ export default class LecturerDao{
     return new Promise((resolve,reject)=>{
       model.lecturer.create({
         name: request.name,
-      sub_id:resolve.sub_id})
+        sub_id:resolve.sub_id})
         .then((lecturer)=>{resolve(lecturer)})
         .catch((error)=>{reject('not created')})
     })
